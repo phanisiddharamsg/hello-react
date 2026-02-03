@@ -207,11 +207,11 @@
       });
     }
   }
-})({"5ZGaK":[function(require,module,exports,__globalThis) {
+})({"frqA7":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 63660;
+var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -727,48 +727,306 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-var _headerJs = require("./Component/Header.js");
-var _headerJsDefault = parcelHelpers.interopDefault(_headerJs);
-var _bodyJs = require("./Component/Body.js");
-var _bodyJsDefault = parcelHelpers.interopDefault(_bodyJs);
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "logo-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "logo",
+                    src: "https://img.freepik.com/free-vector/food-shopping-logo-template-design_460848-10299.jpg?semt=ais_hybrid"
+                }, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 10,
+                    columnNumber: 1
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 9,
+                columnNumber: 1
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav-items",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 14,
+                            columnNumber: 1
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About us"
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 15,
+                            columnNumber: 1
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 16,
+                            columnNumber: 1
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Login"
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 17,
+                            columnNumber: 1
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/App.js",
+                    lineNumber: 13,
+                    columnNumber: 1
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 12,
+                columnNumber: 1
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/App.js",
+        lineNumber: 8,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Header;
+const stylecard = {
+    backgroundColor: "#f0f0f0"
+};
+const resobj = {
+    cards: [
+        {
+            info: {
+                id: "3406455",
+                name: "RNR Biryani",
+                cloudinaryImageId: "jhdvenc7dkmypffoigf",
+                cuisines: [
+                    "Biryani",
+                    "South Indian"
+                ],
+                costForTwo: "\u20B9350 for two"
+            }
+        },
+        {
+            info: {
+                id: "1234564",
+                name: "A2B",
+                cloudinaryImageId: "abcd1234",
+                cuisines: [
+                    "South Indian"
+                ],
+                costForTwo: "\u20B9300 for two"
+            }
+        },
+        {
+            info: {
+                id: "1234569",
+                name: "A2B",
+                cloudinaryImageId: "abcd1234",
+                cuisines: [
+                    "South Indian"
+                ],
+                costForTwo: "\u20B9300 for two"
+            }
+        },
+        {
+            info: {
+                id: "1234568",
+                name: "A2B",
+                cloudinaryImageId: "abcd1234",
+                cuisines: [
+                    "South Indian"
+                ],
+                costForTwo: "\u20B9300 for two"
+            }
+        },
+        {
+            info: {
+                id: "1234567",
+                name: "A2B",
+                cloudinaryImageId: "abcd1234",
+                cuisines: [
+                    "South Indian"
+                ],
+                costForTwo: "\u20B9300 for two"
+            }
+        },
+        {
+            info: {
+                id: "123456",
+                name: "A2B",
+                cloudinaryImageId: "abcd1234",
+                cuisines: [
+                    "South Indian"
+                ],
+                costForTwo: "\u20B9300 for two"
+            }
+        },
+        {
+            info: {
+                id: "1234562",
+                name: "A2B",
+                cloudinaryImageId: "abcd1234",
+                cuisines: [
+                    "South Indian"
+                ],
+                costForTwo: "\u20B9300 for two"
+            }
+        },
+        {
+            info: {
+                id: "1234563",
+                name: "A2B",
+                cloudinaryImageId: "abcd1234",
+                cuisines: [
+                    "South Indian"
+                ],
+                costForTwo: "\u20B9300 for two"
+            }
+        }
+    ]
+};
+const RestaurantCard = ({ resData })=>{
+    if (!resData) return null;
+    const imageId = resData.cloudinaryImageId?.split('/').pop();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "res-card",
+        style: stylecard,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "res-img",
+                alt: "res-img",
+                src: imageId ? `https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,w_660/${imageId}` : "https://via.placeholder.com/250x150?text=No+Image"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 118,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: resData.name
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 122,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: resData.cuisines.join(",")
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 123,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: resData.costForTwo
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 124,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "4.8 stars"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 125,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "40 minutes"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 126,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/App.js",
+        lineNumber: 117,
+        columnNumber: 9
+    }, undefined);
+};
+_c1 = RestaurantCard;
+const Body = ()=>{
+    const restaurantInfo = resobj.cards;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search",
+                children: "Search"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 139,
+                columnNumber: 1
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "res-container",
+                children: restaurantInfo.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                        resData: restaurant.info
+                    }, restaurant.info.id, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 143,
+                        columnNumber: 5
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 140,
+                columnNumber: 1
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/App.js",
+        lineNumber: 138,
+        columnNumber: 9
+    }, undefined);
+};
+_c2 = Body;
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 13,
+                lineNumber: 159,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJsDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 160,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 12,
+        lineNumber: 158,
         columnNumber: 5
     }, undefined);
 };
-_c = AppLayout;
+_c3 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 23,
+    lineNumber: 172,
     columnNumber: 17
 }, undefined));
-console.log(parent);
-var _c;
-$RefreshReg$(_c, "AppLayout");
+var _c, _c1, _c2, _c3;
+$RefreshReg$(_c, "Header");
+$RefreshReg$(_c1, "RestaurantCard");
+$RefreshReg$(_c2, "Body");
+$RefreshReg$(_c3, "AppLayout");
 
   $parcel$ReactRefreshHelpers$4089.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","./Component/Header.js":"hbm1Z","./Component/Body.js":"7xVj3","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -1777,7 +2035,7 @@ module.exports = require("a569817e6ea559f6");
     exports.useTransition = function() {
         return resolveDispatcher().useTransition();
     };
-    exports.version = "19.2.3";
+    exports.version = "19.2.4";
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
@@ -16899,7 +17157,7 @@ module.exports = require("2b53550ce04dc092");
     };
     (function() {
         var isomorphicReactPackageVersion = React.version;
-        if ("19.2.3" !== isomorphicReactPackageVersion) throw Error('Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.3\nLearn more: https://react.dev/warnings/version-mismatch"));
+        if ("19.2.4" !== isomorphicReactPackageVersion) throw Error('Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.4\nLearn more: https://react.dev/warnings/version-mismatch"));
     })();
     "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error("React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://react.dev/link/react-polyfills");
     ReactDOMSharedInternals.findDOMNode = function(componentOrElement) {
@@ -16917,10 +17175,10 @@ module.exports = require("2b53550ce04dc092");
     if (!function() {
         var internals = {
             bundleType: 1,
-            version: "19.2.3",
+            version: "19.2.4",
             rendererPackageName: "react-dom",
             currentDispatcherRef: ReactSharedInternals,
-            reconcilerVersion: "19.2.3"
+            reconcilerVersion: "19.2.4"
         };
         internals.overrideHookState = overrideHookState;
         internals.overrideHookStateDeletePath = overrideHookStateDeletePath;
@@ -16974,7 +17232,7 @@ module.exports = require("2b53550ce04dc092");
         listenToAllSupportedEvents(container);
         return new ReactDOMHydrationRoot(initialChildren);
     };
-    exports.version = "19.2.3";
+    exports.version = "19.2.4";
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
@@ -17418,101 +17676,11 @@ module.exports = require("b0f0e6b9e8349dac");
     exports.useFormStatus = function() {
         return resolveDispatcher().useHostTransitionStatus();
     };
-    exports.version = "19.2.3";
+    exports.version = "19.2.4";
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
-},{"6f0162e9ab224cd4":"jMk1U"}],"hbm1Z":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$545e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$545e.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$545e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Header = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "logo-container",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "logo",
-                    src: "https://img.freepik.com/free-vector/food-shopping-logo-template-design_460848-10299.jpg?semt=ais_hybrid"
-                }, void 0, false, {
-                    fileName: "src/Component/Header.js",
-                    lineNumber: 7,
-                    columnNumber: 1
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/Component/Header.js",
-                lineNumber: 6,
-                columnNumber: 1
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-items",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/Component/Header.js",
-                            lineNumber: 11,
-                            columnNumber: 1
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About us"
-                        }, void 0, false, {
-                            fileName: "src/Component/Header.js",
-                            lineNumber: 12,
-                            columnNumber: 1
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Cart"
-                        }, void 0, false, {
-                            fileName: "src/Component/Header.js",
-                            lineNumber: 13,
-                            columnNumber: 1
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Login"
-                        }, void 0, false, {
-                            fileName: "src/Component/Header.js",
-                            lineNumber: 14,
-                            columnNumber: 1
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/Component/Header.js",
-                    lineNumber: 10,
-                    columnNumber: 1
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/Component/Header.js",
-                lineNumber: 9,
-                columnNumber: 1
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/Component/Header.js",
-        lineNumber: 5,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Header;
-exports.default = Header;
-var _c;
-$RefreshReg$(_c, "Header");
-
-  $parcel$ReactRefreshHelpers$545e.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jnFvT":[function(require,module,exports,__globalThis) {
+},{"6f0162e9ab224cd4":"jMk1U"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -19820,93 +19988,6 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7xVj3":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$b35e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$b35e.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b35e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Body = ()=>{
-    const listofRestaurants = [
-        {
-            data: {
-                id: "255655",
-                name: "Cake & Cream",
-                cloudinaryImageId: "ac57cc371e73f96f812613f58457aca3",
-                areaName: "Jairaj Nagar",
-                costForTwo: "\u20B9200 for two",
-                cuisines: [
-                    "Bakery",
-                    "Hot-dog",
-                    "pastery",
-                    "Cake",
-                    "puff"
-                ],
-                avgRating: 4.3,
-                veg: true,
-                parentId: "54670",
-                avgRatingString: "4",
-                totalRatingsString: "20+"
-            }
-        }
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "body",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "filter",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    className: "filter-btn",
-                    onClick: ()=>{
-                        console.log("button clickrd");
-                    },
-                    children: "Top Rated Restaurants"
-                }, void 0, false, {
-                    fileName: "src/Component/Body.js",
-                    lineNumber: 27,
-                    columnNumber: 5
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/Component/Body.js",
-                lineNumber: 26,
-                columnNumber: 1
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "res-containers",
-                children: listofRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        resData: restaurant
-                    }, restaurant.data.id, false, {
-                        fileName: "src/Component/Body.js",
-                        lineNumber: 32,
-                        columnNumber: 1
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "src/Component/Body.js",
-                lineNumber: 31,
-                columnNumber: 1
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/Component/Body.js",
-        lineNumber: 25,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$b35e.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["5ZGaK","hh6uc"], "hh6uc", "parcelRequire2d53", {}, null, null, "http://localhost:63660")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequire2d53", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=Hello React.2c54e4d8.js.map
